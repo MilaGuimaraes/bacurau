@@ -1,0 +1,74 @@
+@use 'variaveis';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color:variaveis.$corDeFundo;
+    font-family: 'Playfair Display', serif;
+}
+
+@mixin text ($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal
+}
+
+@mixin title ($fontSize: 40px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoSecundario;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title;
+}
+
+.img {
+    background-size: cover;
+    background-position: center center;
+    height: 50vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.p {
+    flex: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, ul {
+    margin: 10px;
+    padding: 10px;
+    ;
+}
+
+
+
